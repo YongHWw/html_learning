@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+
+			background-color: gold;
+			/*边框 border*/
+/*			border-top-color: #000;
+			border-top-width: 10px;
+			solid(实线)  dashed(虚线)  dotted(点线)
+			border-top-style: solid;*/
+			/*上面三句可以简写成一句*/
+			/*         width style color*/
+			border-top:10px solid red;
+
+			border-left:10px dashed black;
+
+			border-right:5px dotted green;
+
+			border-bottom:10px solid blue;
+
+			/*四边一起设置
+			border:10px solid black*/
+
+
+			/*内部填充 padding 会影响总体高度*/
+/*			padding-top: 20px;	
+			padding-left: 40px;
+			padding-bottom: 30px;
+			padding-right: 50px;*/
+			/*上面的设置可以简写如下：*/
+			padding:20px 40px 50px 30px;
+
+			/* 四个值按照顺时针方向，分别设置的是 上 右 下 左  
+
+			/*
+			padding：20px 40px 50px;  
+			设置     上   左右   下  
+			padding：20px 40px;  
+					 上下  左右
+			padding：20px;  设置四边内边距为20px */
+
+
+			/*外边距margin 与padding相同的设置方法*/
+			margin: 50px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="box">元素在页面中显示成一个方块，类似一个盒子，CSS盒子模型就是使用现实中盒子来做比喻，帮助我们设置元素对应的样式。</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*第三种解决塌陷方法-伪元素*/
+		.clearfix:before{
+			content: '';
+			display: table;
+		}
+		.con{
+			width: 300px;
+			height: 300px;
+			background-color: gold;
+			/*第一种解决塌陷方法-加边框*/
+			/*border:1px solid #000;*/
+			/*第二种解决塌陷方法-加溢出*/
+			/*overflow: hidden;*/
+		}
+
+		.box{
+			width: 200px;
+			height: 100px;
+			background-color: green;
+			margin-top: 100px;
+			margin-left: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="con clearfix">
+		<div class="box">
+			
+		</div>
+
+	</div>
+</body>
+</html>

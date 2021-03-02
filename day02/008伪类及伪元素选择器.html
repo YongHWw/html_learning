@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类及伪元素选择器</title>
+	<style>
+		.link{
+			font-size:30px;
+			text-decoration:none;
+			color: gold;
+		}
+		.link:hover{
+			color:green;
+			font-weight: bold;
+		}
+
+		.box01,.box02{
+			font-size: 20px;
+
+		}
+		.box01:before{
+			content: "前面的文字";
+			color:red;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<a class="link" href="https://www.baidu.com">百度一下</a>
+
+
+	<div class="box01">这是第一个div</div>
+	<div class="box02">这是第二个div</div>
+</body>
+</html>
