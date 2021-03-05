@@ -18,32 +18,43 @@
 
 **理解练习**
 1、两端对齐浮动
-![课堂练习示例图片](../../学习笔记/pic/float02.jpg)
+![课堂练习示例图片](../pic/float02.jpg)
 
-![课堂练习示例图片](../../学习笔记/pic/float01.jpg)
+![课堂练习示例图片](../pic/float01.jpg)
+
+
 
 2、请使用浮动制作图中所示的菜单：
-![课堂练习示例图片](../../学习笔记/pic/block04.jpg)
+![课堂练习示例图片](../pic/block04.jpg)
 
 3、文字饶图效果:
-![课堂练习示例图片](../../学习笔记/pic/float003.jpg)
+![课堂练习示例图片](../pic/float003.jpg)
 
 **清除浮动**
 
-- 父级上增加属性overflow：hidden
+- **父级上**增加属性overflow：hidden
 
 - 在最后一个子元素的后面加一个空的div，给它样式属性 clear:both（不推荐）
 
 - 使用成熟的清浮动样式类，clearfix
 
+  ```html
+  /*将元素塌陷和清除浮动合并*/
+  .clearfix:before,clearfix:after{
+  content: "";
+  display: table;
+}
+  .clearfix:after{
+clear: both;
+  }
+  /*IE浏览器上的清除浮动独有*/
+  .clearfix{
+  zoom:1;
+  }
   ```
-  .clearfix:after,.clearfix:before{ content: "";display: table;}
-  .clearfix:after{ clear:both;}
-  .clearfix{zoom:1;}
-  ```
-
+  
   清除浮动的使用方法：
-
+  
   ```
   .con2{... overflow:hidden}
   或者
@@ -52,4 +63,4 @@
 
 **理解练习**
 父级盒子不给高度，子集盒子浮动，父级盒子需要清除浮动
-![课堂练习示例图片](../../学习笔记/pic/float004.jpg)
+![image-20210304004013757](../pic/image-20210304004013757.png)
