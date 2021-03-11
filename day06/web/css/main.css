@@ -1,0 +1,129 @@
+/* 页面顶部样式 */
+
+body{
+    font-family: 'Mircrosoft-Yahei';
+    font-size: 14px;
+}
+.header_con{
+    height: 29px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+
+.header_con .header{
+    width: 1200px;
+    height: 29px;
+    margin: 0 auto;
+}
+
+.header_con .header .welcome{
+    color: #666;
+    line-height: 29px;
+    font-size: 12px;
+}
+
+.user_info{
+    display: none;
+    line-height: 29px;
+    font-size: 12px;
+    color: #666;
+}
+.user_info a{
+    color: #f80;
+}
+
+.login_btns li,.user_btns li{
+    float: left;
+    height: 29px;
+}
+
+.login_btns li a,.login_btns span,.user_btns li a,.user_btns span{
+    display: block;
+    line-height: 29px;
+    font-size: 12px;
+    color: #666;
+}
+
+.login_btns span,.user_btns span{
+    color: #cecece;
+    margin: 0 10px;
+}
+
+.login_btns a:hover, .user_btns a:hover{
+    color: #ff8800;
+} 
+
+/* logo 搜索框 购物车样式 */
+.center_con{
+    width: 1200px;
+    height: 115px;
+    margin: 0 auto;
+    /* background-color: gold; */
+}
+
+.logo{
+    margin: 29px 0 0 17px;
+}
+
+.search_con{
+    width: 616px;
+    height: 38px;
+    margin: 34px 0 0 124px;
+    border: 1px solid #37ab40;
+
+    background: url(../images/icons.png);
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
+}
+
+
+.search_con .input_text{
+    margin-left: 36px;
+    border: 0;
+    width: 480px;
+    height: 38px;
+    /* 去掉选中后的框 */
+    outline: none;
+    
+}
+
+.search_con .input_sub{
+    width: 100px;
+    height: 38px;
+    background-color: #37ab40;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+
+    /* 设置鼠标放过去后形状变成手 */
+    cursor: pointer;
+}
+
+
+
+.chart_con{
+    width: 200px;
+    height: 40px;
+    margin-top: 34px;
+}
+
+.chart_con .chart_link{
+    width: 158px;
+    height: 38px;
+    border: 1px solid #ddd;
+    background: url(../images/icons.png) 12px -42px no-repeat #f7f7f7;
+    text-indent: 56px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #37ab40;
+}
+
+.chart_con .chart_num{
+    width: 40px;
+    height: 40px;
+    background-color: #f80;
+    text-align: center;
+    font: bold 18px/40px 'Mircrisoft Yahei';
+    color: white;
+}
