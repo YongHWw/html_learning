@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color: red!important;
+        }
+
+        .box:hover{
+            color: green;
+        }
+
+        /* 权重100 + 1 + 10 + 1 = 112 */
+        #content div.main_content h2{
+        color:red;    
+        }
+        /* 权重100 + 10 + 1 = 111 */
+        #content .main_content h2{
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" style="color: blue;">这是一个div元素</div>
+
+    <div id="content">
+        <div class="main_content">
+            <h2>这是一个h2标题</h2>
+        </div>
+    </div>
+</body>
+</html>

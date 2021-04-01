@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 3px solid #000;
+            background-color: gold;
+            margin: 500px auto 0;
+
+            transition: all 300ms ease;
+        }
+
+        .box:hover{
+            /* transform的translate的位移比定位做的位移性能高，建议使用这种 */
+            /* transform: translate(30px,30px); */
+            /* transform: scale(2,2); */
+            transform: rotate(-30deg);
+            /* transform: skew(45deg,10deg); */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

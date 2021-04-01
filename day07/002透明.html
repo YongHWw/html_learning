@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(./images/banner01.jpg);
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: black;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+            /* 透明老版写法 */
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+        }
+        .box2{
+            width: 300px;
+            height: 100px;
+            /* 透明新版写法 */
+            background-color:rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">这是一个div</div>
+    <div class="box2">这是一个div</div>
+
+</body>
+</html>

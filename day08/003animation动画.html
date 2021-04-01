@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义动画 */
+        @keyframes moving{
+            from{
+                width: 100px;
+            }
+
+            to{
+                width: 500px;
+            }
+        }
+
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            margin: 500px auto 0;
+
+            animation: moving 1s ease 0s infinite alternate;
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

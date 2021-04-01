@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic_con{
+            width: 200px;
+            height: 300px;
+            margin: 500px auto 0;
+
+            position: relative;
+            overflow: hidden;
+        }    
+        .pic_con:hover .pic_info{
+            top: 180px;
+        }
+        .pic_info{
+            position: absolute;
+            left: 0;
+            top: 300px;
+            width: 180px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 10px;
+            transition: all 300ms ease;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pic_con">
+        <img src="./images/banner01.jpg" alt="banner">
+        <div class="pic_info">
+            <h3>文字说明标题</h3>
+            <p>这是一个很长很长很长很长很长很长的文字说明</p>
+        </div>
+    </div>
+</body>
+</html>

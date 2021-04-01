@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三维旋转</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 3px solid #000;
+            margin: 50px auto 0;
+
+            transform-style: preserve-3d;
+            transform: perspective(800px) scaleY(1,1);
+            transition: all 500ms ease;
+        }
+
+        .box:hover{
+            transform: perspective(800px) scaleY(2,2);
+        }
+
+
+        .box2{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 3px solid #000;
+            margin: 50px auto 0;
+            transform: perspective(800px) rotateX(0deg);
+            transition: all 500ms ease;
+        }
+
+        .box2:hover{
+            transform: perspective(800px) rotateX(45deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <div class="box2"></div>
+</body>
+</html>

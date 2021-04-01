@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 700px;
+            height: 272px;
+            border: 3px solid #000;
+            margin: 50px auto 0;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .box img{
+            position: absolute;
+            left: 200px;
+            top: 0;
+            transition: all 500ms ease;
+            transform: perspective(800px) rotateY(0deg);
+            backface-visibility: hidden;
+        }
+
+        .box:hover img{
+            transform: perspective(800px) rotateY(180deg);
+            transform: scaleX();
+        }
+
+        .box .back{
+            width: 300px;
+            height: 272px;
+            background-color: pink;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            
+            font-size: 20px;
+            text-align: center;
+            line-height: 272px;
+            transition: all 500ms ease;
+            backface-visibility: hidden;
+            transform: perspective(800px) rotateY(-180deg);
+        }
+
+        .box:hover .back{
+            transform: perspective(800px) rotateY(0deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./images/location_bg.jpg" alt="">
+
+        <div class="back">
+            <p style="margin: 0;">图片的说明文字</p>
+        </div>
+    </div>
+</body>
+</html>
