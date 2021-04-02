@@ -40,7 +40,7 @@ background-size:
 
 ### 流体布局
 
-流体布局，就是使用百分比来设置元素的宽度，元素的高度按实际高度写固定值，流体布局中，元素的边线无法用百分比，可以使用样式中的计算函数 calc() 来设置宽度，或者使用 box-sizing 属性将盒子设置为从边线计算盒子尺寸。
+流体布局，就是**使用百分比来设置元素的宽度**，元素的**高度按实际高度写固定值**，流体布局中，元素的边线无法用百分比，可以使用样式中的计算函数 calc() 来设置宽度，或者使用 box-sizing 属性将盒子设置为从边线计算盒子尺寸。
 
 **calc()**
 可以通过计算的方式给元素加尺寸，比如： width：calc(25% - 4px);
@@ -68,7 +68,7 @@ background-size:
 
 ### 基于rem的布局
 
-首先了解em单位，em单位是参照元素自身的文字大小来设置尺寸，rem指的是参照根节点的文字大小，根节点指的是html标签，设置html标签的文字大小，其他的元素相关尺寸设置用rem，这样，所有元素都有了统一的参照标准，改变html文字的大小，就会改变所有元素用rem设置的尺寸大小。
+首先了解em单位，em单位是**参照元素自身的文字大小来设置尺寸**，rem指的是参照根节点的文字大小，根节点指的是html标签，设置html标签的文字大小，其他的元素相关尺寸设置用rem，这样，所有元素都有了统一的参照标准，改变html文字的大小，就会改变所有元素用rem设置的尺寸大小。
 
 **cssrem安装**
 
@@ -77,3 +77,17 @@ cssrem插件可以动态地将px尺寸换算成rem尺寸
 下载本项目，比如：git clone https://github.com/flashlizi/cssrem 进入packages目录：Sublime Text -> Preferences -> Browse Packages... 复制下载的cssrem目录到刚才的packges目录里。 重启Sublime Text。
 
 配置参数 参数配置文件：Sublime Text -> Preferences -> Package Settings -> cssrem px_to_rem - px转rem的单位比例，默认为40。 max_rem_fraction_length - px转rem的小数部分的最大长度。默认为6。 available_file_types - 启用此插件的文件类型。默认为：[".css", ".less", ".sass"]。
+
+对于上中下的移动端布局，有可能会出现顶部和底部的按钮按不了的bug，可以用一个大的div标签包住所有，然后用绝对定位
+
+```html	
+.main_wrap{
+	position: absolute;
+	background-color: gold;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+```
+
