@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/skin01.css" id="link01">  
+    <script>
+        window.onload = function(){
+            var oBtn1 = document.getElementById('btn01')
+            var oBtn2 = document.getElementById('btn02')
+            var oLink = document.getElementById('link01')
+            oBtn1.onclick = function(){
+                oLink.href = 'css/skin01.css'
+            }
+            oBtn2.onclick = function(){
+                oLink.href = 'css/skin02.css'
+            }
+
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    <input type="button" value="皮肤1" id="btn01">
+    <input type="button" value="皮肤2" id="btn02">
+</body>
+</html>

@@ -1,4 +1,7 @@
-.box{
-    width: 12.5rem;
-    height: 6.25rem;
+.zhuan{
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto 0;
+    animation: fengche 3s linear infinite;
 }

@@ -315,3 +315,104 @@ CSS权重指的是样式的优先级，有两条或多条样式作用于一个�
 h2标题的最终颜色为red
 -->
 ```
+
+## CSS3 浏览器前缀
+
+### 浏览器样式前缀
+
+为了让CSS3样式兼容，需要将某些样式加上浏览器前缀：
+
+-ms- 兼容IE浏览器
+-moz- 兼容firefox
+-o- 兼容opera
+-webkit- 兼容chrome 和 safari
+
+比如：
+
+```
+div
+{    
+    -ms-transform: rotate(30deg);        
+    -webkit-transform: rotate(30deg);    
+    -o-transform: rotate(30deg);        
+    -moz-transform: rotate(30deg);    
+    transform: rotate(30deg);
+}
+```
+
+### 自动添加浏览器前缀
+
+目前的状况是，有些CSS3属性需要加前缀，有些不需要加，有些只需要加一部分，这些加前缀的工作可以交给插件来完成，比如安装： autoprefixer
+
+可以在Sublime text中通过package control 安装 autoprefixer
+
+#### Autoprefixer在Sublime text中的设置：
+
+1、preferences/key Bindings-User
+
+```
+{ "keys": ["ctrl+alt+x"], "command": "autoprefixer" }
+```
+
+2、Preferences>package setting>AutoPrefixer>Setting-User
+
+```
+{
+    "browsers": ["last 7 versions"],
+    "cascade": true,
+    "remove": true
+}
+```
+
+last 7 versions：最新的浏览器的7个版本
+cascade：缩进美化属性值
+remove：是否去掉不必要的前缀
+
+
+
+
+
+## HTML5新增标签
+
+**新增语义标签**
+
+1、<header> 页面头部、页眉
+2、<nav> 页面导航
+3、<article> 一篇文章
+4、<section> 文章中的章节
+5、<aside> 侧边栏
+6、<footer> 页面底部、页脚
+
+**音频视频**
+1、<audio>
+2、<video>
+
+PC端兼容h5的新标签的方法，在页面中引入以下js文件:
+
+```
+<script type="text/javascript" src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+```
+
+## HTML5 新增表单控件
+
+基本不用！！！
+
+新增类型：网址 邮箱 日期 时间 星期 数量 范围 电话 颜色 搜索
+
+```
+<label>网址:</label><input type="url" name="" required><br><br> 
+<label>邮箱:</label><input type="email" name="" required><br><br> 
+<label>日期:</label><input type="date" name=""><br><br> 
+<label>时间:</label><input type="time" name=""><br><br> 
+<label>星期:</label><input type="week" name=""><br><br> 
+<label>数量:</label><input type="number" name=""> <br><br>
+<label>范围:</label><input type="range" name=""><br><br> 
+<label>电话:</label><input type="tel" name=""><br><br> 
+<label>颜色:</label><input type="color" name=""><br><br> 
+<label>搜索:</label><input type="search" name=""><br><br>
+```
+
+新增常用表单控件属性：（常用）
+1、placeholder 设置文本框默认提示文字
+2、autofocus 自动获得焦点
+3、autocomplete 联想关键词
