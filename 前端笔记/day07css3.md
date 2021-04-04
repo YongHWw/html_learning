@@ -243,13 +243,38 @@ border-radius:50%;
 1、E[attr] 含有attr属性的元素
 
 ```
-<style type="text/css">
-    div[data-attr='ok']{
-        color:red;
-    }
-</style>
+/* 匹配所有有class属性的div    */
+.con div[class]{
+background-color:gold;
+margin-bottom:10px;
+}
+/* 匹配class属性值是ok的div  */
+.con div[class="ok"]{
+background-color:pink
+}
+
+/* 匹配class属性值是“ok”开头的div  */
+.con div[class^="ok"]{
+text-indent:30px;
+}
+
+/* 匹配class属性值是“ok”结尾的div  */
+.con div[class$="ok"]{
+font-size:30px;
+}
+
+/* 匹配class属性值含有“ok”的div  */
+.con div[class*="ok"]{
+border-bottom:2px solid #000;
+}
 ......
-<div data-attr="ok">这是一个div元素</div>
+<div class="con">
+    <div class="ok">1</div>
+    <div class="okabc">2</div>
+    <div class="abcok">3</div>
+    <div class="abcok123">4</div>
+    <div>5</div>
+</div>
 ```
 
 2、E[attr='ok'] 含有attr属性的元素且它的值为“ok”
