@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            // $div1 = $('div');
+            // $div1.css({'background-color':'gold'});
+            $('div').css({'background-color':'gold'});
+
+            $('div').has('p').css({'font-size':'30px'});
+
+            $('div').eq(4).css({'text-indent':'20px'});
+            $('div').eq(4).prev().css({'color':'red'});
+
+            $('div').find('.tip').css({'font-size':'30px'})
+        })
+
+
+
+
+    </script>
+</head>
+<body>
+    <div>1</div>
+    <div><p>2</p></div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div><span>8</span><span class="tip">9</span></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+
+            function fnTimego(){
+
+                var oDiv = document.getElementById('div1');
+                var sNow = new Date();
+
+                // 未来时间2021年4月30日晚24时0分0秒
+                var sFuture = new Date(2021,3,30,24,0,0);
+
+                //计算还有多少秒
+                var sLeft = parseInt((sFuture - sNow)/1000);
+
+                // 一天 24*60*60 s
+                var iDay = parseInt(sLeft/86400);
+                var iHours = parseInt((sLeft%86400)/3600);
+                var iMin = parseInt(((sLeft%86400)%3600)/60);
+                var iSec = sLeft%60;
+                
+                var sTr = '距离5月1日还剩：' + iDay + '天' + iHours + '时' + iMin + '分' + iSec + '秒';
+
+                oDiv.innerHTML = sTr;
+            }
+
+            fnTimego();
+            setInterval(fnTimego,1000);
+
+        }
+    </script>
+    <style type="text/css">
+		
+		div{
+			text-align:center;
+			font-size:30px;
+			color:pink;
+		}
+
+
+	</style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>

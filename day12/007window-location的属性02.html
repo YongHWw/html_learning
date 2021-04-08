@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function() {
+
+            var oBody = document.getElementById('body01');
+
+            var sData = window.location.search;
+
+            var sHash = window.location.hash;
+
+            alert(sHash);
+            
+            if(sData != ''){
+                var iNum = sData.split('=')[1];
+                if(iNum == 1){
+                    oBody.style.backgroundColor = 'gold';
+                }
+                else if(iNum == 2){
+                    oBody.style.backgroundColor = 'green';
+                }
+                else if(iNum == 3){
+                    oBody.style.backgroundColor = 'lightblue';
+                }
+                
+            }
+
+
+
+        }
+
+    </script>
+</head>
+<body id="body01">
+    
+</body>
+</html>

@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>通过标签获取元素</title>
+	<meta charset="UTF-8">
+	<title>通过标签获取元素</title>
+	<script type="text/javascript">
+		window.onload = function(){
 
-    <script>
-        window.onload = function(){
+			// 通过标签名称获取li元素，生成一个选择集，赋值给aLi
+			var aLi = document.getElementsByTagName('li');
 
-            // 通过标签获取元素,获取的是一个选择集
-            var aLi = document.getElementsByTagName('li');
-            alert(aLi.length);
-            aLi[0].style.backgroundColor = 'gold';
+			// 读取选择集内元素的个数
+			//alert(aLi.length);  // 弹出13
 
-            var oUl = document.getElementById('list1')
-            var aLi2 = oUl.getElementsByTagName('li')
-            alert(aLi2.length)
+			var iLen = aLi.length;
 
-        }
 
-    </script>
+			//给一个li设置背景色
+			//aLi[0].style.backgroundColor = 'gold';
+
+			// 不能给选择集设置样式属性
+			//aLi.style.backgroundColor = 'gold';
+
+			/*
+			同时给所有的li加背景色
+			for(var i=0;i<iLen;i++)
+			{
+				aLi[i].style.backgroundColor = 'gold';
+			}
+			*/
+
+
+			var oUl = document.getElementById('list1');
+			var aLi2 = oUl.getElementsByTagName('li');
+
+			var iLen2 = aLi2.length;
+
+			for(var i=0;i<iLen2;i++)
+			{
+				if(i%2==0)
+				{
+					aLi2[i].style.backgroundColor = 'gold';
+				}
+			}
+
+		}
+
+	</script>
 </head>
 <body>
-    <ul id="list1">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-    </ul>
+	<ul id="list1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
 
-    <ul id="list2">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ul>
+	<ul id="list2">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
 </body>
 </html>

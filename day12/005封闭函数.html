@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function myalert(){
+        //     alert('hello world');
+        // }
+
+        // myalert();
+
+        // (function(){
+        //     alert('hello world');
+        // })();
+
+        var iNum01 = 12;
+        function myalert02(){
+            alert('out');
+        }
+
+
+        (function(){
+            var iNum01 = 24;
+
+            function myalert02(){
+                alert('hello world');
+            }
+            alert(iNum01);
+            myalert02();
+        })();
+
+        alert(iNum01);
+        myalert02();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
