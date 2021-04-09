@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btns input{
+            width: 100px;
+            height: 40px;
+            background-color: #ddd;
+            border: 0px;
+            /* display: none; */
+        }
+
+        .btns .current{
+            background-color: gold;
+        }
+
+        .cons div{
+            width: 500px;
+            height: 300px;
+            background-color: gold;
+            display: none;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+
+        }
+
+        .cons .active{
+            display: block;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $btn = $('.btns input');
+            var $div = $('.cons div');
+
+            $btn.click(function(){
+
+                // var $thisBtn = $btn.filter('.current');
+                // $thisBtn.removeClass('current');
+
+                //this指的是原生的this, 表示当前点击的对象
+                //jquery的this要写成$(this)
+                $(this).addClass('current');
+
+                $(this).addClass('current').siblings().removeClass('current');
+
+                indexOfbtn = $(this).index();
+                $div.eq(indexOfbtn).addClass('active').siblings().removeClass('active');
+            })
+
+
+
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="btns">
+        <input type="button" value="01" class="current">
+        <input type="button" value="02">
+        <input type="button" value="03">
+    </div>
+
+    <div class="cons">
+        <div class="active">选项卡1的内容</div>
+        <div>选项卡2的内容</div>
+        <div>选项卡3的内容</div>
+    </div>
+
+</body>
+</html>

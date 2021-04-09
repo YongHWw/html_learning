@@ -33,7 +33,8 @@ $(function(){
 **jquery用法思想一**
 选择某个网页元素，然后对它进行某种操作
 
-**jquery选择器**
+### **jquery选择器**
+
 jquery选择器可以快速地选择元素，选择规则和css样式相同，使用length属性判断是否选择成功。
 
 ```
@@ -44,7 +45,7 @@ $('#ul1 li span') //选择id为为ul1元素下的所有li下的span元素
 $('input[name=first]') // 选择name属性等于first的input元素
 ```
 
-**对选择集进行过滤**
+### **对选择集进行过滤**
 
 ```
 $('div').has('p'); // 选择包含p元素的div元素
@@ -53,7 +54,7 @@ $('div').filter('.myClass'); //选择class等于myClass的div元素
 $('div').eq(5); //选择第6个div元素
 ```
 
-**选择集转移**
+### **选择集转移**
 
 ```
 $('div').prev(); //选择div元素前面紧挨的同辈元素
@@ -76,4 +77,141 @@ alert($div1.length); // 弹出1
 alert($div2.length); // 弹出0
 ......
 <div id="div1">这是一个div</div>
+```
+
+## jquery样式操作
+
+**jquery用法思想二**
+同一个函数完成取值和赋值
+
+### **操作行间样式**
+
+```
+// 获取div的样式
+$("div").css("width");
+$("div").css("color");
+
+//设置div的样式
+$("div").css("width","30px");
+$("div").css("height","30px");
+$("div").css({fontSize:"30px",color:"red"});
+```
+
+**特别注意**
+选择器获取的多个元素，获取信息获取的是第一个，比如：$("div").css("width")，获取的是第一个div的width。
+
+### **操作样式类名**
+
+```
+$("#div1").addClass("divClass2") //为id为div1的对象追加样式divClass2
+$("#div1").removeClass("divClass")  //移除id为div1的对象的class名为divClass的样式
+$("#div1").removeClass("divClass divClass2") //移除多个样式
+$("#div1").toggleClass("anotherClass") //重复切换anotherClass样式
+```
+
+## 绑定click事件
+
+给元素绑定click事件，可以用如下方法：
+
+```
+$('#btn1').click(function(){
+
+    // 内部的this指的是原生对象
+
+    // 使用jquery对象用 $(this)
+
+})
+```
+
+### **获取元素的索引值**
+
+有时候需要获得匹配元素相对于其同胞元素的索引位置，此时可以用index()方法获取
+
+```
+var $li = $('.list li').eq(1);
+alert($li.index()); // 弹出1
+......
+<ul class="list">
+    <li>1</li>
+    <li>2</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+```
+
+
+
+## jquery特殊效果
+
+fadeOut() 淡出
+fadeToggle() 切换淡入淡出
+hide() 隐藏元素
+show() 显示元素
+toggle() 切换元素的可见状态
+slideDown() 向下展开
+slideUp() 向上卷起
+slideToggle() 依次展开或卷起某个元素
+
+```
+fadeIn() 淡入
+
+    $btn.click(function(){
+
+        $('#div1').fadeIn(1000,'swing',function(){
+            alert('done!');
+        });
+
+    });
+
+fadeOut() 淡出
+fadeToggle() 切换淡入淡出
+hide() 隐藏元素
+show() 显示元素
+toggle() 切换元素的可见状态
+slideDown() 向下展开
+slideUp() 向上卷起
+slideToggle() 依次展开或卷起某个元素
+```
+
+## jquery链式调用
+
+jquery对象的方法会在执行完后返回这个jquery对象，所有jquery对象的方法可以连起来写：
+
+```
+$('#div1') // id为div1的元素
+.children('ul') //该元素下面的ul子元素
+.slideDown('fast') //高度从零变到实际高度来显示ul元素
+.parent()  //跳到ul的父元素，也就是id为div1的元素
+.siblings()  //跳到div1元素平级的所有兄弟元素
+.children('ul') //这些兄弟元素中的ul子元素
+.slideUp('fast');  //高度实际高度变换到零来隐藏ul元素
+```
+
+
+
+
+
+## jquery动画
+
+通过animate方法可以设置元素某属性值上的动画，可以设置一个或多个属性值，动画执行完成后会执行一个函数。
+
+```
+$('#div1').animate({
+    width:300,
+    height:300
+},1000,'swing',function(){
+    alert('done!');
+});
+```
+
+参数可以写成数字表达式：
+
+```
+$('#div1').animate({
+    width:'+=100',
+    height:300
+},1000,'swing',function(){
+    alert('done!');
+});
 ```
