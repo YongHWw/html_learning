@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btns input{
+            width: 100px;
+            height: 40px;
+            background-color: #ddd;
+            border: 0px;
+            outline: none;
+            /* display: none; */
+        }
+
+        .btns .current{
+            background-color: gold;
+        }
+
+        .cons{
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cons .slides{
+            width: 1500px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .cons .slides div{
+            width: 500px;
+            height: 300px;
+            background-color: gold;
+            /* display: none; */
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            float: left;
+        }
+
+        .cons .active{
+            display: block;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $btn = $('.btns input');
+            var $slides = $('.cons .slides');
+
+            $btn.click(function(){
+
+                $(this).addClass('current').siblings().removeClass('current');
+
+                // $slides.css({'left':-500*$(this).index()});
+                $slides.stop().animate({'left':-500*$(this).index()});
+
+
+               
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="btns">
+        <input type="button" value="01" class="current">
+        <input type="button" value="02">
+        <input type="button" value="03">
+    </div>
+
+    <div class="cons">
+        <div class="slides">
+            <div class="active">选项卡1的内容</div>
+            <div>选项卡2的内容</div>
+            <div>选项卡3的内容</div>
+        </div>
+    </div>
+
+</body>
+</html>
