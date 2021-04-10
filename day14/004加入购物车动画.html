@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        .chart{
+            width: 150px;
+            height: 50px;
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 50px;
+            float: right;
+            margin-right: 100px;
+            margin-top: 50px;
+        }
+
+        .chart em{
+            font-style: normal;
+            color: red;
+            font-weight: bold;
+        }
+
+        .add{
+            width: 100px;
+            height: 50px;
+            background-color: green;
+            border: 0px;
+            color: #fff;
+            float: left;
+            margin-top: 300px;
+            margin-left: 300px;
+        }
+
+        .point{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: red;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            display: none;
+            z-index: 9999;
+        }
+
+    </style>
+    <script>
+        $(function(){
+
+            var $chart = $('.chart');
+            var $count = $('.chart em');
+            var $btn = $('.add');
+
+            $btn.click(function(){
+                var $point = $('.point');
+
+                var oPos01 = $btn.offset();
+                var oPos02 = $chart.offset();
+                
+                $point.show().css({'left':oPos01.left+parseInt($btn.outerWidth()/2)-8, 
+                             'top':oPos01.top+parseInt($btn.outerHeight()/2)-8})
+                
+
+                $point.stop().animate({'left':oPos02.left+parseInt($chart.outerWidth()/2)-8,
+                                'top':oPos02.top+parseInt($chart.outerHeight()/2)-8},800,function(){
+                                    $point.hide();
+
+                                    var iNum = $count.html();
+                                    $count.html(parseInt(iNum) + 1);
+                                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div class="chart">购物车: <em>0</em></div>
+    <input type="button" value="加入购物车" class="add">
+
+    <div class="point"></div>
+</body>
+</html>

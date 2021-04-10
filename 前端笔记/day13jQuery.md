@@ -215,3 +215,4 @@ $('#div1').animate({
     alert('done!');
 });
 ```
+

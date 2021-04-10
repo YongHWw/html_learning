@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <style>
+
+        body{
+            margin: 0px;
+        }
+
+        .banner{
+            width: 960px;
+            height: 200px;
+            background-color: cyan;
+            margin: 0 auto;
+        }
+
+        .menu_back{
+            width: 960px;
+            height: 80px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .menu{
+            width: 960px;
+            height: 80px;
+            background-color: gold;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        p{
+            text-align: center;
+            color: red;
+        }
+
+        .to_top{
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            color: #fff;
+            position: fixed;
+            opacity: 0.3;
+            right: 20px;
+            bottom: 50px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            display: none;
+        }
+
+    </style>
+    <script>
+
+        $(function(){
+
+            var $menu_back = $('.menu_back');
+            var $to_top = $('.to_top');
+
+            $(window).scroll(function(){
+
+                var iNum = $(document).scrollTop();
+                var $menu = $('.menu');
+
+                if(iNum>=200){
+                    $menu.css({
+                        'position':'fixed',
+                        'top':0,
+                        'left':'50%',
+                        'margin-left':-480});
+
+                    $menu_back.show();
+                }
+                else{
+                    $menu.css({'position':'static','margin-left':'auto'});
+                    $menu_back.hide();
+                }
+
+                if(iNum>=400){
+                    $to_top.fadeIn();
+                }
+                else{
+                    $to_top.fadeOut();
+                }
+
+            })
+
+            $to_top.click(function(){
+                $('html, body').animate({'scrollTop':0});
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="menu">菜单</div>
+
+    <div class="menu_back"></div>
+
+    <div class="to_top">⬆</div>
+
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 10px solid #000;
+            margin: 20px;
+            background-color: gold;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            var $div = $('.box');
+            //盒子内容的尺寸
+            console.log($div.width())
+            console.log($div.height())
+
+            // 盒子内容加上padding的尺寸
+            console.log($div.innerWidth())
+            console.log($div.innerHeight())
+
+            // 盒子内容加上padding和border的尺寸，即真实尺寸
+            console.log($div.outerWidth())
+            console.log($div.outerHeight())
+            
+            // 真实尺寸加上margin尺寸
+            console.log($div.outerWidth(true))
+            console.log($div.outerHeight(true))
+
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

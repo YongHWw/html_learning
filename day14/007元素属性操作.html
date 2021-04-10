@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+
+            var $a = $('.link');
+
+            // 读取class属性，没有设置属性的读取值为空
+            console.log($a.prop('class'));
+
+
+            // 设置属性
+            $a.prop({'href':'https:www.baidu.com', 'title':'这是去到百度网的链接'})
+        
+            console.log($a.html());
+        })
+
+    </script>
+</head>
+<body>
+    <a href="#" class="link">这是一个a标签</a>
+</body>
+</html>
