@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+
+            var $h1 = $('#title01');
+            var $p = $('#p1');
+            var $span = $('#span01');
+
+            // 剪切和粘贴的操作
+            // $p.insertBefore($h1);
+            $h1.before($p);
+    
+            $span.appendTo($p);
+
+            $h1.remove();
+
+        })
+
+    </script>
+</head>
+<body>
+
+    <h1 id="title01">这是一个H1元素</h1>
+    <p id="p1">这是一个p元素</p>
+    <span id="span01">这是一个span标签</span>
+
+</body>
+</html>

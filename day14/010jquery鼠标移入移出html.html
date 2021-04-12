@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+            // $('.con').mouseover(function(){
+            //     alert('鼠标移入')
+            // })  
+            
+            // $('.con').mouseout(function(){
+            //     alert('鼠标移出')
+            // }) 
+
+            // $('.con').mouseenter(function(){
+            //     alert('鼠标移入')
+            // })
+
+            // $('.con').mouseleave(function(){
+            //     alert('鼠标移出')
+            // })
+
+            $('.con').hover(function(){
+                alert('鼠标移入')
+            }, function(){
+                alert('鼠标移出')
+            })
+        })
+
+    </script>
+    <style>
+
+        .con{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

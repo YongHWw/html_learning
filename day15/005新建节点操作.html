@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+
+            // 这种方式添加内容会把所有内容覆盖，性能最高
+            // $('#div1').html( $('#div1').html() + '<p>这是一个p标签</p>');
+
+            // 新建一个带有属性的a元素
+            var $a = $('<a href="#">链接</a>');
+
+            // 新建一个空的a元素
+            var $a2 = $('<a>');
+
+            var $p = $('<p>这是一个p元素</p>');
+
+            var $h2 = $('<h2>这是一个h2标签</h2>');
+
+            var $h3 = $('<h3>这是一个h3标签</h3>');
+            
+            // 父元素的最后面插入子元素
+            $('#div1').append($a);
+            // $a.appendTo($('#div1'));
+
+            $('#div1').append($a2);
+
+            // 父元素内的前面放入子元素
+            $('#div1').prepend($p);
+            // $p.prependTo($('#div1'));
+
+            // 在父元素同级的后面放入同级元素
+            $('#div1').after($h2);
+            // $h2.inserAfter($('#div1'));
+
+            // 在父元素同级的前面放入同级元素
+            $('#div1').before($h3);
+            // $h3.inserBefore($('#div1'));
+        })
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h1>这是一个H1元素</h1>
+    </div>
+</body>
+</html>

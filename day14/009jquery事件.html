@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $inp1 = $('#input01');
+            $inp2 = $('#input02');
+
+            // 在获得焦点的时候做什么事情
+            // $inp1.focus(function(){
+            //     alert('input01')
+            // })
+            
+            // 一进入页面就获得焦点
+            $inp1.focus();
+
+            $inp1.blur(function(){
+                // 获取input元素的val值
+                var sVal = $(this).val();
+                alert(sVal);
+            })
+
+
+            $('#form1').submit(function(){
+                // alert('submit')
+                return false
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="text" name="user" id="input01">
+        <input type="text" name="password" id="input02">
+        <input type="submit" value="提交" id="submit">
+    </form>
+    
+</body>
+</html>

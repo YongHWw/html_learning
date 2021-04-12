@@ -8,29 +8,22 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script>
         $(function(){
+            // $('#btn').click(function(){
 
-            var $list = $('.list li');
-            $list.each(function(i){
-                console.log($(this).index());
+            // })
+
+            // 点击或者鼠标移入的时候都执行绑定的匿名函数
+            $('#btn').bind('click mouseover' , function(){
+                alert('click事件')
+                $(this).unbind('mouseover')
             })
 
-
         })
-
 
 
     </script>
 </head>
 <body>
-    <ul class="list">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-    </ul>
+    <input type="button" value="按钮" id="btn">
 </body>
 </html>
