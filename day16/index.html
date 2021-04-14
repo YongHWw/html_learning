@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+
+        $(function(){
+
+            $.ajax({
+
+                url:'data.json',
+                type:'get',
+                dataType:'json',
+
+            //     // 成功后执行的函数，旧版写法
+            //     success:function(data){
+            //     alert(data.name);
+            // },
+        
+            })
+            // 新版写法
+            .done(function(data){
+                $('#username').html(data.name);
+                $('#userage').html(data.age);
+            })
+            .fail(function(){
+                alert('服务器异常')
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+    <p>姓名：<span id="username"></span></p>
+    <p>年龄：<span id="userage"></span></p>
+</body>
+</html>
