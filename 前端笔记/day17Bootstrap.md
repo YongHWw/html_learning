@@ -153,48 +153,71 @@ bootstrap将页面横向分为12等分，按照12等分定义了适应不同宽�
 6、checkbox checkbox-inline 多选框样式
 7、radio radio-inline 单选框样式
 8、input-group 表单控件组
-9、input-group-addon 表单控件组物件样式
+9、input-group-addon 表单控件组物件样式(提示)
 10、input-group-btn 表单控件组物件为按钮的样式
 11、form-group-lg 大尺寸表单
 12、form-group-sm 小尺寸表单
 
 ```
-<!--  表单  -->
-<form role="form">
-  <div class="form-group form-group-lg">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="input01">用户名：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="text" class="form-control" placeholder="用户名" id="input01">
+                </div>
 
-<!--  表单控件组  -->
-<div class="input-group">
-  <input type="text" class="form-control">
-  <span class="input-group-addon">@</span>
-</div>
+                <div class="form-group">
+                    <label>密码：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+            </form>
 
-<!--  表单控件组  -->
-<div class="input-group">
-  <input type="text" class="form-control">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Go!</button>
-  </span>
-</div>
+            <br>
+            <br>
+            <br>
+
+            <!-- 内联表单 -->
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="input02">用户名：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="text" class="form-control" placeholder="用户名" id="input02">
+                </div>
+
+                <div class="form-group">
+                    <label>密码：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- 水平排列表单 需要加入栅格，输入框要用div包起来 -->
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="input03" class="col-xs-2">用户名：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="text" class="form-control" placeholder="用户名" id="input03">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-2">密码：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="password" class="form-control" placeholder="密码">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 ```
 
 #### bootstrap 图片
@@ -221,6 +244,7 @@ img-responsive 声明响应式图片
 14、navbar-text 定义导航条中的文本
 15、navbar-left 菜单靠左
 16、navbar-right 菜单靠右
+17、navbar-toggle 屏幕变窄后才显示的导航缩略条
 
 ```
 <!-- 可伸缩菜单 data-target="#.." 需要加#  -->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <!-- 用导航条包container -->
+    <!-- navbar-static-top去掉圆角 -->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <!-- 导航条头部 -->
+            <!-- 定义logo -->
+            <div class="navbar-header">
+                <!-- 屏幕变窄后的导航缩略条 -->
+                <!-- 添加data-toggle和data-target 控制变窄后的缩略条展开，data-target为navbar-collapse包住内容的id -->
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+                    <!-- 小横条 -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">LOGO</a>
+            </div>
+
+            <!-- 加入一个div包住ul和form，这样屏幕变窄后包住的内容就会隐藏起来 -->
+            <div class="collapse navbar-collapse" id="mymenu">
+                <!-- 定义菜单 -->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">公司简介</a></li>
+                    <li><a href="#">解决方案</a></li>
+                </ul>
+
+                <!-- 定义菜单里面的表单 -->
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--  -->
+
+        </div>
+    </div>
+
+</body>
+</html>

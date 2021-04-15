@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>表单</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <label for="input01">用户名：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="text" class="form-control" placeholder="用户名" id="input01">
+                </div>
+
+                <div class="form-group">
+                    <label>密码：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- 内联表单 -->
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="input02">用户名：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="text" class="form-control" placeholder="用户名" id="input02">
+                </div>
+
+                <div class="form-group">
+                    <label>密码：</label>
+                    <!-- form-control 固定写法 -->
+                    <input type="password" class="form-control" placeholder="密码">
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- 水平排列表单 需要加入栅格，输入框要用div包起来 -->
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="input03" class="col-xs-2">用户名：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="text" class="form-control" placeholder="用户名" id="input03">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-xs-2">密码：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="password" class="form-control" placeholder="密码">
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <form class="form-horizontal">
+                <div class="form-group form-group-lg">
+                    <label for="input03" class="col-xs-2"><span class="glyphicon glyphicon-user"></span>用户名：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="text" class="form-control" placeholder="用户名" id="input03">
+                    </div>
+                </div>
+
+                <div class="form-group form-group-sm">
+                    <label class="col-xs-2">密码：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="password" class="form-control" placeholder="密码">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="input03" class="col-xs-2">通信地址：</label>
+                    <div class="col-xs-10">
+                        <!-- form-control 固定写法 -->
+                        <input type="text" class="form-control" placeholder="通信地址" id="input03">
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            <!-- 表单控件组（提示） -->
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control">
+                </div>
+
+                <br>
+                <br>
+                
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <!-- <input type="button" value="搜索" class="btn btn-default"> -->
+                        <button class="btn btn-primary">搜索</button>
+                    </span>
+                </div>
+                
+                <br>
+                <br>
+                
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <!-- <input type="button" value="搜索" class="btn btn-default"> -->
+                        <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
