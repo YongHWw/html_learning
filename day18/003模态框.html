@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+
+        $(function(){
+
+            $('#btn01').click(function(){
+                // 固定写法
+                // $('#modal04').modal('show');
+
+                $('#modal04').modal({
+                    show:true,
+                    backdrop:'static'
+                });
+
+            })
+
+            $('#shutoff').click(function(){
+                $('#modal04').modal('hide');
+            })
+
+
+        })
+
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <button class="btn btn-primary" data-toggle="modal", data-target='#modal01'>弹出模态框</button>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-primary" data-toggle="modal", data-target='#modal02'>弹出大模态框</button>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-primary" data-toggle="modal", data-target='#modal03'>弹出小模态框</button>
+        </div>
+
+        <div class="row">
+            <button class="btn btn-primary" id="btn01">js控制的弹框</button>
+        </div>
+
+    </div>
+
+    <!-- .modal>.modal-dialog>.modal-content>.modal-header+.modal-body+.modal-footer -->
+    <div class="modal fade" id="modal01">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    弹框头部-提示弹框
+                </div>
+
+                <div class="modal-body">
+                    <p>弹框主体-文字内容</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">我知道了</button>
+                    <button class="btn btn-default" data-dismiss='modal'>取消</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal02">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    弹框头部-提示弹框
+                </div>
+
+                <div class="modal-body">
+                    <p>弹框主体-文字内容</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">我知道了</button>
+                    <button class="btn btn-default" data-dismiss='modal'>取消</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal03">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    弹框头部-提示弹框
+                </div>
+
+                <div class="modal-body">
+                    <p>弹框主体-文字内容</p>
+                    <p>弹框主体-文字内容</p>
+                    <p>弹框主体-文字内容</p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary">我知道了</button>
+                    <button class="btn btn-default" data-dismiss='modal'>取消</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal04">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    弹框头部-提示弹框
+                </div>
+
+                <div class="modal-body">
+                    <p>js控制的弹框</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="ok">我知道了</button>
+                    <button class="btn btn-default" id="shutoff">取消</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
